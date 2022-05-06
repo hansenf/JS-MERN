@@ -1,0 +1,27 @@
+GET http://localhost:5000/users
+
+###
+GET http://localhost:5000/users/627399d15a2167e1643cc499
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name" : "Handy K",
+    "email" : "hk17@gmail.com",
+    "gender" : "Male"
+}
+
+###
+PATCH http://localhost:5000/users/627399d15a2167e1643cc499
+Content-Type: application/json
+
+{
+    "name" : "Hansen Feriandy",
+    "email" : "hf17@gmail.com",
+    "gender" : "Male"
+}
+
+###
+DELETE  http://localhost:5000/users/62739ce07b6697dea7039583
