@@ -7,8 +7,8 @@ app.use(cors({origin: true}));
 
 var serviceAccount = require("./permissions.json");
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://temukand-d8854-default-rtdb.asia-southeast1.firebasedatabase.app"
+    credential: admin.credential.cert(serviceAccount),
+    databaseURL: "https://temukand-d8854-default-rtdb.asia-southeast1.firebasedatabase.app"
 });
 
 const db = admin.firestore();
@@ -23,8 +23,8 @@ app.post('/api/create', (req, res) => {
             console.log(error);
             return res.status(500).send(error);
         }
-      })();
-  });
+    })();
+});
 
 // read item
 app.get('/api/read/:item_id', (req, res) => {

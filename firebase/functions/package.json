@@ -24,7 +24,9 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^7.6.0",
     "eslint-config-google": "^0.14.0",
-    "firebase-functions-test": "^0.2.0"
+    "eslint-plugin-promise": "^6.0.0",
+    "firebase-functions-test": "^0.2.3",
+    "firebase-tools": "^11.0.0"
   },
   "private": true
 }
