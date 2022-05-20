@@ -18,7 +18,7 @@ app.post('/api/create', (req, res) => {
     (async () => {
         try {
             await db.collection('items').doc('/' + req.body.id + '/').create({item: req.body.item});
-            return res.status(200).send();
+            return res.status(200).send("created");
         } catch (error) {
             console.log(error);
             return res.status(500).send(error);
@@ -74,7 +74,7 @@ app.put('/api/update/:item_id', (req, res) => {
         await document.update({
             item: req.body.item
         });
-        return res.status(200).send();
+        return res.status(200).send("updated");
     } catch (error) {
         console.log(error);
         return res.status(500).send(error);
@@ -88,7 +88,7 @@ app.delete('/api/delete/:item_id', (req, res) => {
     try {
         const document = db.collection('items').doc(req.params.item_id);
         await document.delete();
-        return res.status(200).send();
+        return res.status(200).send("deleted");
     } catch (error) {
         console.log(error);
         return res.status(500).send(error);
