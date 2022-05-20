@@ -11,4 +11,5 @@ module.exports = {
   rules: {
     quotes: ["error", "double"],
   },
+  "scripts": { "lint": "eslint" }
 };
